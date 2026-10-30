@@ -7,7 +7,6 @@ public partial class Start : Node2D
 
 	public override void _Ready()
 	{
-		TranslationServer.SetLocale("en");
 	}
 
 	public override void _Process(double delta)
@@ -34,8 +33,8 @@ public partial class Start : Node2D
 	{
 		switch(i)
 		{
-			case 0: TranslationServer.SetLocale("ru"); break;
-			case 1: TranslationServer.SetLocale("en"); break;
+			case 0: GetNode<LanguageManager>("/root/LanguageManager").ChangeLanguage("ru"); break;
+			case 1: GetNode<LanguageManager>("/root/LanguageManager").ChangeLanguage("en"); break;
 		}
 	}
 

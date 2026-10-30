@@ -16,6 +16,10 @@ run/main_scene="uid://5p3735l1nphl"
 config/features=PackedStringArray("4.7", "C#")
 config/icon="res://icon.png"
 
+[autoload]
+
+LanguageManager="*uid://nbdbij06oqud"
+
 [display]
 
 window/size/viewport_width=395
@@ -27,7 +31,7 @@ project/assembly_name="Probably Stolen Calculator"
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://Translation/Main.ru.translation", "res://Translation/Main.en.translation")
+locale/translations=PackedStringArray("res://Translation/Main.en.translation", "res://Translation/Main.ru.translation")
 
 [rendering]
 
