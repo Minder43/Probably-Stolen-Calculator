@@ -1,0 +1,186 @@
+[gd_scene format=3 uid="uid://bc2oe80qfmqrl"]
+
+[ext_resource type="Script" uid="uid://b0cdnrwisfpme" path="res://Scripts/Head.cs" id="1_jyx5b"]
+[ext_resource type="Texture2D" uid="uid://dmwxxodyaimdt" path="res://assets/loadgame_base.png" id="1_x2eit"]
+[ext_resource type="FontFile" uid="uid://dh8tgylgbgdlr" path="res://YujiBoku-Regular.ttf" id="2_kfvyn"]
+[ext_resource type="Texture2D" uid="uid://b520udrq5yeil" path="res://assets/button_main_menu_n.png" id="3_ks68h"]
+[ext_resource type="Texture2D" uid="uid://cc61hhoithjlg" path="res://assets/button_main_menu_h.png" id="4_m04d3"]
+[ext_resource type="Texture2D" uid="uid://dxmoi2uaumv83" path="res://assets/button_main_menu_p.png" id="5_umdvi"]
+[ext_resource type="Texture2D" uid="uid://cxw8um5cynfdi" path="res://assets/arrow_prev_normal.png" id="6_umdvi"]
+[ext_resource type="Texture2D" uid="uid://dnx1wlt1cb2c" path="res://assets/arrow_prev_hover.png" id="7_jyx5b"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_25sud"]
+texture = ExtResource("3_ks68h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m30mi"]
+texture = ExtResource("4_m04d3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7o34y"]
+texture = ExtResource("5_umdvi")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s1w75"]
+texture = ExtResource("6_umdvi")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8xyvj"]
+texture = ExtResource("7_jyx5b")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nl7y1"]
+texture = ExtResource("6_umdvi")
+
+[node name="Start" type="Node2D" unique_id=1491917633]
+script = ExtResource("1_jyx5b")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=505894287]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_x2eit")
+
+[node name="Label" type="Label" parent="TextureRect" unique_id=2140075034]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 8.0
+offset_right = 263.0
+offset_bottom = 32.0
+theme_override_fonts/font = ExtResource("2_kfvyn")
+text = "MECHANICAL_ARM"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="TextureRect" unique_id=1335435740]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 54.0
+offset_right = 364.0
+offset_bottom = 78.0
+theme_override_fonts/font = ExtResource("2_kfvyn")
+text = "SPECIFY_CHARACTERISTICS"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="TextureRect" unique_id=573305074]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 129.0
+offset_right = 179.0
+offset_bottom = 153.0
+theme_override_fonts/font = ExtResource("2_kfvyn")
+text = "MATERIAL"
+
+[node name="OptionButton" type="OptionButton" parent="TextureRect/Label3" unique_id=869924772]
+layout_mode = 0
+offset_left = 169.0
+offset_right = 353.0
+offset_bottom = 31.0
+theme_override_font_sizes/font_size = 15
+selected = 0
+item_count = 3
+popup/item_0/text = "ALUMINUM_ALLOY"
+popup/item_0/id = 0
+popup/item_1/text = "CARBON_ALLOY"
+popup/item_1/id = 1
+popup/item_2/text = "GOLD_COATING"
+popup/item_2/id = 2
+
+[node name="Label4" type="Label" parent="TextureRect" unique_id=1058785445]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 209.0
+offset_right = 192.0
+offset_bottom = 233.0
+theme_override_fonts/font = ExtResource("2_kfvyn")
+text = "CONDITION"
+
+[node name="OptionButton" type="OptionButton" parent="TextureRect/Label4" unique_id=2013481198]
+layout_mode = 0
+offset_left = 169.0
+offset_right = 353.0
+offset_bottom = 31.0
+theme_override_font_sizes/font_size = 15
+selected = 0
+item_count = 3
+popup/item_0/text = "NO_FEATURES"
+popup/item_0/id = 0
+popup/item_1/text = "WEAR"
+popup/item_1/id = 1
+popup/item_2/text = "DAMAGE"
+popup/item_2/id = 2
+
+[node name="Label5" type="Label" parent="TextureRect" unique_id=1053975250]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 272.0
+offset_right = 196.0
+offset_bottom = 299.0
+theme_override_fonts/font = ExtResource("2_kfvyn")
+text = "UI_MANAGEMENT"
+
+[node name="OptionButton" type="OptionButton" parent="TextureRect/Label5" unique_id=1822888966]
+layout_mode = 0
+offset_left = 172.0
+offset_top = -4.0
+offset_right = 356.0
+offset_bottom = 27.0
+theme_override_font_sizes/font_size = 15
+selected = 0
+item_count = 4
+popup/item_0/text = "EMG"
+popup/item_0/id = 0
+popup/item_1/text = "EMG+"
+popup/item_1/id = 1
+popup/item_2/text = "NEURAL"
+popup/item_2/id = 2
+popup/item_3/text = "NOT_SPECIFIED"
+popup/item_3/id = 3
+
+[node name="Label6" type="Label" parent="TextureRect" unique_id=1639419433]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 341.0
+offset_right = 210.0
+offset_bottom = 392.0
+theme_override_fonts/font = ExtResource("2_kfvyn")
+text = "ADDITIONS"
+
+[node name="CheckBox" type="CheckBox" parent="TextureRect/Label6" unique_id=30404993]
+layout_mode = 0
+offset_left = 190.0
+offset_top = -18.0
+offset_right = 268.0
+offset_bottom = 13.0
+text = "ARMOR"
+
+[node name="CheckBox2" type="CheckBox" parent="TextureRect/Label6" unique_id=1039496480]
+layout_mode = 0
+offset_left = 189.0
+offset_top = 9.0
+offset_right = 267.0
+offset_bottom = 40.0
+text = "BLADE"
+
+[node name="Button3" type="Button" parent="." unique_id=1509475175]
+offset_left = 36.0
+offset_top = 406.0
+offset_right = 366.0
+offset_bottom = 454.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_25sud")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m30mi")
+theme_override_styles/hover = SubResource("StyleBoxTexture_7o34y")
+
+[node name="Label" type="Label" parent="Button3" unique_id=2026447701]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 11.0
+offset_right = 201.0
+offset_bottom = 34.0
+text = "RATE"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=225127538]
+offset_left = 29.0
+offset_top = 451.0
+offset_right = 58.0
+offset_bottom = 476.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_s1w75")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8xyvj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nl7y1")
+
+[connection signal="pressed" from="Button3" to="." method="_on_count_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_back_pressed"]

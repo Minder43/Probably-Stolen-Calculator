@@ -1,0 +1,45 @@
+keys,en,ru
+MECHANICAL_ARM,Mechanical arm,Механическая рука
+SANDWICH,Sandwich,Сендвич
+PLASMA_CARTRIDGE,Plasma cartridge,Плазменный картридж
+WELCOME,Welcome,Добро пожаловать
+CHOOSE_ITEM,Choose an item to rate,Выберите предмет оценки
+MATERIAL,Material,Материал
+CONDITION,Condition,Состояние
+UI_MANAGEMENT,Management\ninterface,Интерфейс\nуправления
+ADDITIONS,Additions,Дополнения
+SPECIFY_CHARACTERISTICS,Specify characteristics,Укажите характеристики
+DAMAGED_PACKAGING,Damaged packaging,Поврежденная упаковка
+PRODUCTION_DATE,Production\ndate,Дата\nпроизводства
+FAKE_LOGO,None/\nFake\nLogo,Нет/\nПоддельный\nЛоготип
+PLACE_OF_PRODUCTION,Place\nof production,Место\nпроизводства
+SESAME,Sesame,Кунжут
+CUCUMBER_2_LAYERS,2 layers of cucumbers,2 слоя огурцов
+MEAT_2_LAYERS,2 layers of meat,2 слоя мяса
+RATE,Rate,Оценить
+ALUMINUM_ALLOY,Aluminum alloy,Алюминиевый сплав
+CARBON_ALLOY,Carbon alloy,Углеродный сплав
+GOLD_COATING,Gold coating,Золотое покрытие
+NO_FEATURES,No features,Без особенностей
+WEAR,Wear,Износ
+DAMAGE,Damage,Повреждения
+ARMOR,Armor,Броня
+BLADE,Blade,Клинок
+STANDARD,Standard,Стандарт
+LIGHT_WEAR,Light wear,Лёгкий износ
+SIGNIFICANT_WEAR,Significant wear,Значительный износ
+NOTHING,Nothing,Ничего
+CRACKS,Cracks,Трещины
+VISIBLE_SCREWS,Visible screws,Видны винты
+REINFORCED_BODY,Reinforced body,Усиленный корпус
+LOW_QUALITY,Low quality,Низкое качество
+HIGH_QUALITY,High quality,Высокое качество
+MANUFACTURER,Manufacturer,Производитель
+PLASMA_COLOR,Plasma color,Цвет\nплазмы
+TOTAL_COST,Total cost,Итоговая стоимость
+BACK,Back,Вернуться
+NEURAL,Neural,Нейронный
+NOT_SPECIFIED,Not specified,Не указано
+MULTIPLE_MANUFACTURERS_ERROR,Multiple\nmanufacturers\nselected,Ошибка выбрано\nнесколько производителей
+NO_MANUFACTURERS_ERROR,No\nmanufacturer\nselected,Ошибка не выбранно\nне одного производителя
+NO_SEAL,No seal,Пломбы нет

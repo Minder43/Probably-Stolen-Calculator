@@ -1,0 +1,257 @@
+[gd_scene format=3 uid="uid://l1ctujf3weoh"]
+
+[ext_resource type="Texture2D" uid="uid://dmwxxodyaimdt" path="res://assets/loadgame_base.png" id="1_g8rmu"]
+[ext_resource type="Script" uid="uid://b5c072rlk4xyo" path="res://Scripts/Cartridge.cs" id="1_m0i0f"]
+[ext_resource type="FontFile" uid="uid://dh8tgylgbgdlr" path="res://YujiBoku-Regular.ttf" id="2_t4dy0"]
+[ext_resource type="Texture2D" uid="uid://b0r8rddpx6dhl" path="res://assets/WLD.png" id="3_5u3qs"]
+[ext_resource type="Texture2D" uid="uid://73gu3x81wy06" path="res://assets/ZHS.png" id="4_m0i0f"]
+[ext_resource type="Texture2D" uid="uid://thpebx5dmnlo" path="res://assets/RNR.png" id="5_j5sty"]
+[ext_resource type="Texture2D" uid="uid://pgj4ck1u7ty4" path="res://assets/IGN.png" id="6_j68wg"]
+[ext_resource type="Texture2D" uid="uid://b520udrq5yeil" path="res://assets/button_main_menu_n.png" id="7_x0x3i"]
+[ext_resource type="Texture2D" uid="uid://cc61hhoithjlg" path="res://assets/button_main_menu_h.png" id="8_atrki"]
+[ext_resource type="Texture2D" uid="uid://dxmoi2uaumv83" path="res://assets/button_main_menu_p.png" id="9_y127q"]
+[ext_resource type="Texture2D" uid="uid://cxw8um5cynfdi" path="res://assets/arrow_prev_normal.png" id="10_5u3qs"]
+[ext_resource type="Texture2D" uid="uid://dnx1wlt1cb2c" path="res://assets/arrow_prev_hover.png" id="11_m0i0f"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_erhqp"]
+texture = ExtResource("7_x0x3i")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mhvrm"]
+texture = ExtResource("8_atrki")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_avg4u"]
+texture = ExtResource("9_y127q")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j5sty"]
+texture = ExtResource("10_5u3qs")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j68wg"]
+texture = ExtResource("11_m0i0f")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dax34"]
+texture = ExtResource("10_5u3qs")
+
+[node name="Start" type="Node2D" unique_id=1056807911]
+script = ExtResource("1_m0i0f")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=584831354]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_g8rmu")
+
+[node name="Label" type="Label" parent="TextureRect" unique_id=1356215033]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 297.0
+offset_bottom = 28.0
+theme_override_fonts/font = ExtResource("2_t4dy0")
+text = "PLASMA_CARTRIDGE"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="TextureRect" unique_id=677969342]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 54.0
+offset_right = 364.0
+offset_bottom = 78.0
+theme_override_fonts/font = ExtResource("2_t4dy0")
+text = "SPECIFY_CHARACTERISTICS"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="TextureRect" unique_id=1754080121]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 87.0
+offset_right = 262.0
+offset_bottom = 111.0
+theme_override_fonts/font = ExtResource("2_t4dy0")
+text = "MANUFACTURER"
+
+[node name="CheckBox" type="CheckBox" parent="TextureRect/Label3" unique_id=543884586]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 31.0
+offset_right = 62.0
+offset_bottom = 62.0
+text = "WLD"
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/Label3/CheckBox" unique_id=293911024]
+layout_mode = 0
+offset_left = 73.0
+offset_top = -5.0
+offset_right = 126.0
+offset_bottom = 35.0
+texture = ExtResource("3_5u3qs")
+
+[node name="CheckBox2" type="CheckBox" parent="TextureRect/Label3" unique_id=1645687304]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 29.0
+offset_right = 230.0
+offset_bottom = 60.0
+text = "RNR"
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/Label3/CheckBox2" unique_id=1924055969]
+layout_mode = 0
+offset_left = 70.0
+offset_top = -4.0
+offset_right = 125.0
+offset_bottom = 36.0
+texture = ExtResource("5_j5sty")
+
+[node name="CheckBox3" type="CheckBox" parent="TextureRect/Label3" unique_id=1486140113]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 74.0
+offset_right = 63.0
+offset_bottom = 105.0
+text = "ZHS"
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/Label3/CheckBox3" unique_id=684300836]
+layout_mode = 0
+offset_left = 72.0
+offset_top = -5.0
+offset_right = 125.0
+offset_bottom = 35.0
+texture = ExtResource("4_m0i0f")
+
+[node name="CheckBox4" type="CheckBox" parent="TextureRect/Label3" unique_id=596195556]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 71.0
+offset_right = 232.0
+offset_bottom = 102.0
+text = "IGN"
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/Label3/CheckBox4" unique_id=539595243]
+layout_mode = 0
+offset_left = 68.0
+offset_top = -2.0
+offset_right = 123.0
+offset_bottom = 38.0
+texture = ExtResource("6_j68wg")
+
+[node name="Label4" type="Label" parent="TextureRect" unique_id=1161167403]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 209.0
+offset_right = 192.0
+offset_bottom = 233.0
+theme_override_fonts/font = ExtResource("2_t4dy0")
+text = "CONDITION"
+
+[node name="OptionButton" type="OptionButton" parent="TextureRect/Label4" unique_id=585283269]
+layout_mode = 0
+offset_left = 163.0
+offset_top = -1.0
+offset_right = 358.0
+offset_bottom = 30.0
+theme_override_font_sizes/font_size = 15
+selected = 0
+item_count = 3
+popup/item_0/text = "STANDARD"
+popup/item_0/id = 0
+popup/item_1/text = "LIGHT_WEAR"
+popup/item_1/id = 1
+popup/item_2/text = "SIGNIFICANT_WEAR"
+popup/item_2/id = 2
+
+[node name="OptionButton2" type="OptionButton" parent="TextureRect/Label4" unique_id=651312202]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 36.0
+offset_right = 360.0
+offset_bottom = 67.0
+theme_override_font_sizes/font_size = 15
+selected = 0
+item_count = 4
+popup/item_0/text = "NOTHING"
+popup/item_0/id = 0
+popup/item_1/text = "CRACKS"
+popup/item_1/id = 1
+popup/item_2/text = "VISIBLE_SCREWS"
+popup/item_2/id = 2
+popup/item_3/text = "REINFORCED_BODY"
+popup/item_3/id = 3
+
+[node name="Label5" type="Label" parent="TextureRect" unique_id=1131376140]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 277.0
+offset_right = 189.0
+offset_bottom = 328.0
+theme_override_fonts/font = ExtResource("2_t4dy0")
+text = "PLASMA_COLOR"
+
+[node name="OptionButton" type="OptionButton" parent="TextureRect/Label5" unique_id=87011159]
+layout_mode = 0
+offset_left = 169.0
+offset_top = 9.0
+offset_right = 353.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 15
+selected = 0
+item_count = 3
+popup/item_0/text = "STANDARD"
+popup/item_0/id = 0
+popup/item_1/text = "LOW_QUALITY"
+popup/item_1/id = 1
+popup/item_2/text = "HIGH_QUALITY"
+popup/item_2/id = 2
+
+[node name="CheckBox" type="CheckBox" parent="TextureRect" unique_id=357922723]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 315.0
+offset_right = 163.0
+offset_bottom = 346.0
+text = "NO_SEAL"
+
+[node name="Button3" type="Button" parent="." unique_id=2011886575]
+offset_left = 58.0
+offset_top = 421.0
+offset_right = 388.0
+offset_bottom = 469.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_erhqp")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mhvrm")
+theme_override_styles/hover = SubResource("StyleBoxTexture_avg4u")
+
+[node name="Label" type="Label" parent="Button3" unique_id=1905436552]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 11.0
+offset_right = 201.0
+offset_bottom = 34.0
+text = "RATE"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=1319328808]
+offset_left = 29.0
+offset_top = 451.0
+offset_right = 58.0
+offset_bottom = 476.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_j5sty")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_j68wg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_dax34")
+
+[node name="Label6" type="Label" parent="." unique_id=1484671327]
+visible = false
+offset_left = 15.0
+offset_top = 362.0
+offset_right = 391.0
+offset_bottom = 413.0
+theme_override_fonts/font = ExtResource("2_t4dy0")
+text = "MULTIPLE_MANUFACTURERS_ERROR"
+
+[node name="Label7" type="Label" parent="." unique_id=1526474783]
+visible = false
+offset_left = 16.0
+offset_top = 361.0
+offset_right = 392.0
+offset_bottom = 412.0
+theme_override_fonts/font = ExtResource("2_t4dy0")
+text = "NO_MANUFACTURERS_ERROR"
+
+[connection signal="pressed" from="Button3" to="." method="_on_rate_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_back_pressed"]

@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://bhbtgsvddypty"]
+
+[ext_resource type="Script" uid="uid://ds8ebjtdrqj3l" path="res://Scripts/Finish.cs" id="1_1fd2a"]
+[ext_resource type="Texture2D" uid="uid://dmwxxodyaimdt" path="res://assets/loadgame_base.png" id="1_afcut"]
+[ext_resource type="FontFile" uid="uid://dh8tgylgbgdlr" path="res://YujiBoku-Regular.ttf" id="2_1fd2a"]
+[ext_resource type="Texture2D" uid="uid://b520udrq5yeil" path="res://assets/button_main_menu_n.png" id="3_csd6s"]
+[ext_resource type="Texture2D" uid="uid://cc61hhoithjlg" path="res://assets/button_main_menu_h.png" id="4_qvka2"]
+[ext_resource type="Texture2D" uid="uid://dxmoi2uaumv83" path="res://assets/button_main_menu_p.png" id="5_fkj4q"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pqvyt"]
+texture = ExtResource("3_csd6s")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oxag6"]
+texture = ExtResource("4_qvka2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4du6t"]
+texture = ExtResource("5_fkj4q")
+
+[node name="Start" type="Node2D" unique_id=647171155]
+script = ExtResource("1_1fd2a")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=389182988]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_afcut")
+
+[node name="Label" type="Label" parent="TextureRect" unique_id=459153015]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 174.0
+offset_right = 344.0
+offset_bottom = 198.0
+theme_override_fonts/font = ExtResource("2_1fd2a")
+text = "TOTAL_COST"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="TextureRect/Label" unique_id=1635250925]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 33.0
+offset_right = 209.0
+offset_bottom = 62.0
+horizontal_alignment = 1
+
+[node name="Button3" type="Button" parent="." unique_id=578005671]
+offset_left = 36.0
+offset_top = 406.0
+offset_right = 366.0
+offset_bottom = 454.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_pqvyt")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_oxag6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4du6t")
+
+[node name="Label" type="Label" parent="Button3" unique_id=1757383150]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 11.0
+offset_right = 201.0
+offset_bottom = 34.0
+text = "BACK"
+
+[connection signal="pressed" from="Button3" to="." method="_on_back_pressed"]
