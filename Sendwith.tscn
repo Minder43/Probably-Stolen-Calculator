@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dxmoi2uaumv83" path="res://assets/button_main_menu_p.png" id="5_apcr7"]
 [ext_resource type="Texture2D" uid="uid://cxw8um5cynfdi" path="res://assets/arrow_prev_normal.png" id="6_ut1h4"]
 [ext_resource type="Texture2D" uid="uid://dnx1wlt1cb2c" path="res://assets/arrow_prev_hover.png" id="7_6av13"]
+[ext_resource type="Texture2D" uid="uid://d3bcyntrgc13x" path="res://assets/modding.png" id="9_apcr7"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0fbwh"]
 texture = ExtResource("3_ut1h4")
@@ -119,10 +120,10 @@ theme_override_fonts/font = ExtResource("2_7pa3q")
 
 [node name="CheckBox" type="CheckBox" parent="TextureRect/Label7" unique_id=819210084]
 layout_mode = 0
-offset_left = 34.0
-offset_top = -9.0
-offset_right = 121.0
-offset_bottom = 22.0
+offset_left = 33.0
+offset_top = -11.0
+offset_right = 122.0
+offset_bottom = 20.0
 text = "SESAME"
 
 [node name="CheckBox2" type="CheckBox" parent="TextureRect/Label7" unique_id=185148346]
@@ -140,32 +141,6 @@ offset_top = 21.0
 offset_right = 186.0
 offset_bottom = 52.0
 text = "MEAT_2_LAYERS"
-
-[node name="Label8" type="Label" parent="TextureRect" unique_id=704920285]
-layout_mode = 0
-offset_left = 273.0
-offset_top = 209.0
-offset_right = 376.0
-offset_bottom = 260.0
-theme_override_fonts/font = ExtResource("2_7pa3q")
-theme_override_font_sizes/font_size = 10
-text = "FAKE_LOGO"
-
-[node name="CheckBox" type="CheckBox" parent="TextureRect/Label8" unique_id=876157063]
-layout_mode = 0
-offset_left = -1.0
-offset_top = 55.0
-offset_right = 23.0
-offset_bottom = 79.0
-text = "DARVE"
-
-[node name="CheckBox2" type="CheckBox" parent="TextureRect/Label8" unique_id=122473064]
-layout_mode = 0
-offset_left = 1.0
-offset_top = 89.0
-offset_right = 81.0
-offset_bottom = 120.0
-text = "RIBWICH"
 
 [node name="Button3" type="Button" parent="." unique_id=1111356646]
 offset_left = 36.0
@@ -193,5 +168,85 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_apcr7")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_mmy2t")
 theme_override_styles/hover = SubResource("StyleBoxTexture_s1w75")
 
+[node name="Button2" type="Button" parent="." unique_id=1474132989]
+offset_left = 358.0
+offset_top = 251.0
+offset_right = 380.0
+offset_bottom = 276.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_apcr7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mmy2t")
+theme_override_styles/hover = SubResource("StyleBoxTexture_s1w75")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=633161338]
+offset_left = 395.0
+offset_right = 590.0
+offset_bottom = 479.0
+texture = ExtResource("9_apcr7")
+
+[node name="Button4" type="Button" parent="TextureRect2" unique_id=765287998]
+layout_mode = 0
+offset_left = 182.0
+offset_top = 277.0
+offset_right = 204.0
+offset_bottom = 302.0
+scale = Vector2(-1, -1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_apcr7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mmy2t")
+theme_override_styles/hover = SubResource("StyleBoxTexture_s1w75")
+
+[node name="Label8" type="Label" parent="TextureRect2" unique_id=704920285]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 77.0
+offset_right = 189.0
+offset_bottom = 108.0
+theme_override_fonts/font = ExtResource("2_7pa3q")
+text = "NO_LOGO"
+horizontal_alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="TextureRect2/Label8" unique_id=876157063]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 37.0
+offset_right = 84.0
+offset_bottom = 68.0
+text = "DARVE"
+
+[node name="CheckBox2" type="CheckBox" parent="TextureRect2/Label8" unique_id=122473064]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 68.0
+offset_right = 103.0
+offset_bottom = 99.0
+text = "RIBWICH"
+
+[node name="Label9" type="Label" parent="TextureRect2" unique_id=784467482]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 195.0
+offset_right = 186.0
+offset_bottom = 246.0
+theme_override_fonts/font = ExtResource("2_7pa3q")
+text = "FAKE_LOGO"
+horizontal_alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="TextureRect2/Label9" unique_id=1354977661]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 55.0
+offset_right = 23.0
+offset_bottom = 79.0
+text = "DARVE"
+
+[node name="CheckBox2" type="CheckBox" parent="TextureRect2/Label9" unique_id=1694399497]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 89.0
+offset_right = 81.0
+offset_bottom = 120.0
+text = "RIBWICH"
+
 [connection signal="pressed" from="Button3" to="." method="_on_rate_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="TextureRect2/Button4" to="." method="_on_ridht_pressed"]

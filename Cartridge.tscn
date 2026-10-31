@@ -202,10 +202,10 @@ popup/item_2/id = 2
 
 [node name="CheckBox" type="CheckBox" parent="TextureRect" unique_id=357922723]
 layout_mode = 0
-offset_left = 36.0
-offset_top = 315.0
-offset_right = 163.0
-offset_bottom = 346.0
+offset_left = 261.0
+offset_top = 79.0
+offset_right = 388.0
+offset_bottom = 110.0
 text = "NO_SEAL"
 
 [node name="Button3" type="Button" parent="." unique_id=2011886575]

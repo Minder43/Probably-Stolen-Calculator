@@ -11,7 +11,6 @@ ADDITIONS,Additions,Дополнения
 SPECIFY_CHARACTERISTICS,Specify characteristics,Укажите характеристики
 DAMAGED_PACKAGING,Damaged packaging,Поврежденная упаковка
 PRODUCTION_DATE,Production\ndate,Дата\nпроизводства
-FAKE_LOGO,None/\nFake\nLogo,Нет/\nПоддельный\nЛоготип
 PLACE_OF_PRODUCTION,Place\nof production,Место\nпроизводства
 SESAME,Sesame,Кунжут
 CUCUMBER_2_LAYERS,2 layers of cucumbers,2 слоя огурцов
@@ -43,3 +42,5 @@ NOT_SPECIFIED,Not specified,Не указано
 MULTIPLE_MANUFACTURERS_ERROR,Multiple\nmanufacturers\nselected,Ошибка выбрано\nнесколько производителей
 NO_MANUFACTURERS_ERROR,No\nmanufacturer\nselected,Ошибка не выбранно\nне одного производителя
 NO_SEAL,No seal,Пломбы нет
+NO_LOGO,No logo,Нет логотипа
+FAKE_LOGO,Fake\nlogo,Поддельный\nлоготип

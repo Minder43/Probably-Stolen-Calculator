@@ -94,7 +94,7 @@ public partial class Head : Node2D
 		if(armor == true) Cost += 50;
 		if(blade == true) Cost += 80;
 
-		if(material == "Carbon alloy" && (interfaceType == "Neural" || interfaceType == "EMG+") && state ==  "No features" && (armor == true || blade == true)) Cost += 100;
+		if(material == "Carbon alloy" && (interfaceType == "Neural" || interfaceType == "EMG+") && state ==  "No features" && armor == true && blade == true) Cost += 100;
 		if(material == "Gold coating" && interfaceType == "Neural" && state ==  "No features") Cost += 200;
 
 		if(Cost < 50) Cost = 50;
