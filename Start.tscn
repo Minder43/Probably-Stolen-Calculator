@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://b520udrq5yeil" path="res://assets/button_main_menu_n.png" id="3_b54qk"]
 [ext_resource type="Texture2D" uid="uid://cc61hhoithjlg" path="res://assets/button_main_menu_h.png" id="4_5tfw5"]
 [ext_resource type="Texture2D" uid="uid://dxmoi2uaumv83" path="res://assets/button_main_menu_p.png" id="5_46pen"]
+[ext_resource type="Texture2D" uid="uid://cxw8um5cynfdi" path="res://assets/arrow_prev_normal.png" id="7_46pen"]
+[ext_resource type="Texture2D" uid="uid://dnx1wlt1cb2c" path="res://assets/arrow_prev_hover.png" id="8_smcay"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_25sud"]
 texture = ExtResource("3_b54qk")
@@ -16,6 +18,15 @@ texture = ExtResource("4_5tfw5")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7o34y"]
 texture = ExtResource("5_46pen")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tfnpb"]
+texture = ExtResource("7_46pen")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u7ysv"]
+texture = ExtResource("8_smcay")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x6lyq"]
+texture = ExtResource("7_46pen")
+
 [node name="Start" type="Node2D" unique_id=974169430]
 script = ExtResource("1_b54qk")
 
@@ -23,16 +34,6 @@ script = ExtResource("1_b54qk")
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_r305v")
-
-[node name="Label" type="Label" parent="TextureRect" unique_id=257966973]
-layout_mode = 0
-offset_left = 14.0
-offset_top = 8.0
-offset_right = 262.0
-offset_bottom = 32.0
-theme_override_fonts/font = ExtResource("2_xhal0")
-text = "WELCOME"
-horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="TextureRect" unique_id=511963201]
 layout_mode = 0
@@ -102,21 +103,17 @@ theme_override_font_sizes/font_size = 14
 text = "PLASMA_CARTRIDGE"
 horizontal_alignment = 1
 
-[node name="OptionButton" type="OptionButton" parent="TextureRect" unique_id=910846191]
+[node name="Button" type="Button" parent="TextureRect" unique_id=31691204]
 layout_mode = 0
-offset_left = 129.0
-offset_top = 411.0
-offset_right = 287.0
-offset_bottom = 431.0
-alignment = 1
-selected = 1
-item_count = 2
-popup/item_0/text = "Русский"
-popup/item_0/id = 0
-popup/item_1/text = "English"
-popup/item_1/id = 1
+offset_left = 29.0
+offset_top = 451.0
+offset_right = 58.0
+offset_bottom = 476.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_tfnpb")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_u7ysv")
+theme_override_styles/hover = SubResource("StyleBoxTexture_x6lyq")
 
 [connection signal="pressed" from="TextureRect/Label2/Button" to="." method="_on_head_pressed"]
 [connection signal="pressed" from="TextureRect/Label2/Button2" to="." method="_on_sendwith_pressed"]
 [connection signal="pressed" from="TextureRect/Label2/Button3" to="." method="_on_cartridge_pressed"]
-[connection signal="item_selected" from="TextureRect/OptionButton" to="." method="_on_option_button_item_selected"]
+[connection signal="pressed" from="TextureRect/Button" to="." method="_on_button_pressed"]

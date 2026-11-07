@@ -20,4 +20,14 @@ public partial class Finish : Node2D
 	{
 		GetTree().ChangeSceneToFile("res://Start.tscn");
 	}
+
+	private void _on_again_pressed()
+	{
+		switch(Main.Pos)
+		{
+			case "Head" : GetTree().ChangeSceneToFile("res://Head.tscn"); break;
+			case "Sendwith" : GetTree().ChangeSceneToFile("res://Sendwith.tscn"); break;
+			case "Cartridge" : GetTree().ChangeSceneToFile("res://Cartridge.tscn"); break;
+		}
+	}
 }

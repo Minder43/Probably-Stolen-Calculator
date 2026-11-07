@@ -3,11 +3,11 @@ using System;
 
 public partial class Cartridge : Node2D
 {
-	private string manufacturer = "" , condition1 = "" , condition2 = "" , plazmacolor = "";
-	private bool No = false;
+	private string manufacturer = "" , condition = "" , plazmacolor = "" , condit = "";
+	private bool No = false , cracks = false , visible_screws = false , reinforced_body = false;
 	
-	private CheckBox _1 , _2 , _3 , _4 , _No;
-	private OptionButton _optionButton, _optionButton2, _optionButton3;
+	private CheckBox _1 , _2 , _3 , _4 , _No , _checkBox , _checkBox2 , _checkBox3;
+	private OptionButton _optionButton, _optionButton3;
 	private Label error , errorZ;
 
 	public override void _Ready()
@@ -18,11 +18,14 @@ public partial class Cartridge : Node2D
 		_4 = GetNode<CheckBox>("TextureRect/Label3/CheckBox4");
 		_No = GetNode<CheckBox>("TextureRect/CheckBox");
 
+		_checkBox = GetNode<CheckBox>("TextureRect/Label4/CheckBox");
+		_checkBox2 = GetNode<CheckBox>("TextureRect/Label4/CheckBox2");
+		_checkBox3 = GetNode<CheckBox>("TextureRect/Label4/CheckBox3");
+
 		error = GetNode<Label>("Label6");
 		errorZ = GetNode<Label>("Label7");
 
 		_optionButton = GetNode<OptionButton>("TextureRect/Label4/OptionButton");
-		_optionButton2 = GetNode<OptionButton>("TextureRect/Label4/OptionButton2");
 		_optionButton3 = GetNode<OptionButton>("TextureRect/Label5/OptionButton");
 	}
 
@@ -40,23 +43,20 @@ public partial class Cartridge : Node2D
 		else if (!_1.ButtonPressed && !_2.ButtonPressed && !_3.ButtonPressed && !_4.ButtonPressed) {if(No){ErrorZ(); return;}}
 		else {if(No){Error(); return;}}
 
-		int c1 = _optionButton.GetSelectedId();
-		int c2 = _optionButton2.GetSelectedId();
+		int c = _optionButton.GetSelectedId();
 		int p = _optionButton3.GetSelectedId();
 
-		switch(c1)
-		{
-			case 0: condition1 = "Standart"; break;
-			case 1: condition1 = "Light wear"; break;
-			case 2: condition1 = "Significant wear"; break;
-		}
+		cracks = _checkBox.ButtonPressed;
+		visible_screws = _checkBox2.ButtonPressed;
+		reinforced_body = _checkBox3.ButtonPressed;
 
-		switch(c2)
+		if(!cracks && !visible_screws && !reinforced_body) condit = "Nothing";
+
+		switch(c)
 		{
-			case 0: condition2 = "Nothing"; break;
-			case 1: condition2 = "Cracks"; break;
-			case 2: condition2 = "Visible screws"; break;
-			case 3: condition2 = "Reinforced body"; break;
+			case 0: condition = "Standart"; break;
+			case 1: condition = "Light wear"; break;
+			case 2: condition = "Significant wear"; break;
 		}
 
 		switch(p)
@@ -73,20 +73,20 @@ public partial class Cartridge : Node2D
 	{
 		int Cost = 300; 
 
-		if(condition1 == "Light wear") {Cost -= 45;}
-		else if(condition1 == "Significant wear") {Cost -= 90;}
+		if(condition == "Light wear") {Cost -= 45;}
+		else if(condition == "Significant wear") {Cost -= 90;}
 
-		if(condition2 == "Cracks") {Cost -= 150;}
-		else if(condition2 == "Visible screws") {Cost -= 30;}
-		else if(condition2 == "Reinforced body") {Cost += 60;}
+		if(cracks ) {Cost -= 150;}
+		else if(visible_screws) {Cost -= 30;}
+		else if(reinforced_body) {Cost += 60;}
 
 		if(plazmacolor == "Low quality") {Cost -= 150;}
 		else if(plazmacolor == "High quality") {Cost += 150;}
 
 		if(manufacturer == "WLD" && No && (plazmacolor == "Low quality" || plazmacolor == "Standart")) Cost += 60;
-		if(manufacturer == "ZHS" && No && plazmacolor == "Standart" && (condition2 == "Nothing" || condition2 == "Reinforced body")) Cost += 120;
-		if(manufacturer == "RNR" && No && plazmacolor == "Standart" && condition2 != "Cracks") Cost += 120;
-		if(manufacturer == "IGN" && No && condition2 == "Nothing" && plazmacolor == "High quality") Cost += 750;
+		if(manufacturer == "ZHS" && No && plazmacolor == "Standart" && (condit == "Nothing" || reinforced_body)) Cost += 120;
+		if(manufacturer == "RNR" && No && plazmacolor == "Standart" && !cracks) Cost += 120;
+		if(manufacturer == "IGN" && No && condit == "Nothing" && plazmacolor == "High quality") Cost += 750;
 
 		if(Cost < 90) Cost = 90;
 

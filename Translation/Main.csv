@@ -44,3 +44,47 @@ NO_MANUFACTURERS_ERROR,No\nmanufacturer\nselected,Ошибка не выбран
 NO_SEAL,No seal,Пломбы нет
 NO_LOGO,No logo,Нет логотипа
 FAKE_LOGO,Fake\nlogo,Поддельный\nлоготип
+AGAIN,Again,Ещё раз
+CHOOSE_SPECIALIZATION,Choose specialization,Выберите специализацию
+APPRAISER,Appraiser,Оценщик
+WATER_CALCULATOR,Water calculator,Калькулятор воды
+WINE_CALCULATOR,Wine calculator,Винный калькулятор
+FISH_FOOD_CALCULATOR,Fish food calculator,Калькулятор корма для рыб
+WATER_1,Water 1,Вода 1
+WATER_2,Water 2,Вода 2
+AMOUNT_ML,Amount (ml),Количество (мл)
+REQUIRED_AMOUNT_ML,Required amount (ml),Необходимое\nколичество (мл)
+QUALITY_PERCENT,Quality %,Качество %
+TOTAL_QUALITY_PERCENT,Total quality %,Итоговое качество %
+WATER_DILUTION,Dilution of water\nwith water of another quality,Разбавление воды\nводой другого качества
+REVERSE_CALCULATOR,Reverse calculator,Обратный калькулятор
+CALCULATE,Calculate,Рассчитать
+WATER_TYPE,Water type,Тип воды
+PURE,Pure,Чистая
+QUALITY,Quality,Качественная
+STANDARD,Standard,Стандартная
+GHOSTLY,Ghostly,Призрачная
+TECHNICAL,Technical,Техническая
+SEWAGE,Sewage,Канализационная
+BERRY,Berry,Ягода
+NO,No,Нет
+SMALL,Small,Мелкая
+NORMAL,Normal,Нормальная
+UNRIPE,Unripe,Недозревшая
+OVERRIPE,Overripe,Перезревшая
+MOLD,Mold,Плесень
+YEAST,Yeast,Дрожжи
+SUPER_YEAST,Super yeast,Супер дрожжи
+SYNTHETIC_YEAST,Synthetic yeast,Синтетические дрожжи
+WATER,Water,Вода
+RIPENING_DAYS,Ripening days,Дни созревания
+FINAL_WINE,Final wine,Итоговое вино
+SPECIAL_VINTAGE,Special vintage,Особое\nвинтажное
+AGED,Aged,Выдержанное
+MASS_PRODUCTION,Mass production,Массового\nпр-ва
+HOMEMADE,Homemade,Домашнее
+SWILL,Swill,Бормотуха
+TO_THE_TRASH,To the trash,В помойку
+MISSING_INGREDIENTS,Missing ingredients,Нехватает\nингридиентов
+SYNTHETIC_WINE,Synthetic wine,Синтетическое вино
+SPECIAL_THANKS,Special thanks\nto DerevyanniyLES for\nproviding data,Специальное спасибо\nDerevyanniyLES за \nпредоставление данных

@@ -4,17 +4,9 @@ using System;
 public partial class Start : Node2D
 {
 	public static int Cost = 0;
-	private OptionButton _Language;
 
 	public override void _Ready()
 	{
-		_Language = GetNode<OptionButton>("TextureRect/OptionButton");
-		string Language = TranslationServer.GetLocale();
-		switch(Language)
-		{
-			case "ru": _Language.Selected = 0; break;
-			case "en": _Language.Selected = 1; break;
-		}
 	}
 
 	public override void _Process(double delta)
@@ -24,26 +16,28 @@ public partial class Start : Node2D
 
 	private void _on_head_pressed()
 	{
-		GetTree().ChangeSceneToFile("res://Head.tscn");
+		Posit("Head");
 	}
 
 	private void _on_sendwith_pressed()
 	{
-		GetTree().ChangeSceneToFile("res://Sendwith.tscn");
+		Posit("Sendwith");
 	}
 
 	private void _on_cartridge_pressed()
 	{
-		GetTree().ChangeSceneToFile("res://Cartridge.tscn");
+		Posit("Cartridge");
 	}
 
-	private void _on_option_button_item_selected(int i)
+	private void Posit(string name)
 	{
-		switch(i)
-		{
-			case 0: GetNode<LanguageManager>("/root/LanguageManager").ChangeLanguage("ru"); break;
-			case 1: GetNode<LanguageManager>("/root/LanguageManager").ChangeLanguage("en"); break;
-		}
+		GetTree().ChangeSceneToFile($"res://{name}.tscn");
+		Main.Pos = name;
+	}
+
+	private void _on_button_pressed()
+	{
+		GetTree().ChangeSceneToFile("res://Main.tscn");
 	}
 
 }

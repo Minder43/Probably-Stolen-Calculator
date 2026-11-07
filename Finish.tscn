@@ -59,4 +59,22 @@ offset_right = 201.0
 offset_bottom = 34.0
 text = "BACK"
 
+[node name="Button4" type="Button" parent="." unique_id=182443437]
+offset_left = 38.0
+offset_top = 341.0
+offset_right = 368.0
+offset_bottom = 389.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_pqvyt")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_oxag6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4du6t")
+
+[node name="Label" type="Label" parent="Button4" unique_id=443591348]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 11.0
+offset_right = 201.0
+offset_bottom = 34.0
+text = "AGAIN"
+
 [connection signal="pressed" from="Button3" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_again_pressed"]

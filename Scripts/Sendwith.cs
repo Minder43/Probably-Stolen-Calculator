@@ -19,8 +19,8 @@ public partial class Sendwith : Node2D
 		_Check4 = GetNode<CheckBox>("TextureRect/Label7/CheckBox3");
 		_Check5 = GetNode<CheckBox>("TextureRect2/Label8/CheckBox");
 		_Check6 = GetNode<CheckBox>("TextureRect2/Label8/CheckBox2");
-		_Check7 = GetNode<CheckBox>("TextureRect2/Label8/CheckBox");
-		_Check8 = GetNode<CheckBox>("TextureRect2/Label8/CheckBox2");
+		_Check7 = GetNode<CheckBox>("TextureRect2/Label9/CheckBox");
+		_Check8 = GetNode<CheckBox>("TextureRect2/Label9/CheckBox2");
 
 		_Spin = GetNode<SpinBox>("TextureRect/Label4/HBoxContainer/SpinBox");
 		_Spin2 = GetNode<SpinBox>("TextureRect/Label4/HBoxContainer/SpinBox2");
